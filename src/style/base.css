@@ -80,6 +80,7 @@ main {
 
 .menu-lateral__playlist {
     padding-left: 1rem;
+    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -98,6 +99,7 @@ main {
 .secao__titulo {
     font-weight: 700;
     font-size: 1.25rem;
+    -webkit-user-select: none;
     user-select: none;
 }
 
