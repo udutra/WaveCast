@@ -33,6 +33,6 @@
     height: 100%;
 }
 
-.secao-vertical .secao__cartoes .cartao__titulo{
+.secao-vertical .secao__cartoes .cartao .cartao__titulo{
     flex-grow: 1;
 }

@@ -1,0 +1,121 @@
+.barra-reproducao{
+    width: 100%vw;
+    display: grid;
+    grid-template-areas: 
+        "conteudo controles-reproducao volume"
+        "conteudo temporizador volume";
+    grid-template-columns: 
+        minmax(min(20%,200px), max(15%, 300px)) 
+        minmax(45%,600px)
+        minmax(min(20%,200px), max(15%, 300px));
+    padding: 1em;
+    justify-content: space-between;
+}
+
+.barra-reproducao__conteudo{
+    grid-area: conteudo;
+    display: grid;
+    grid-template-areas: 
+        "imagem titulo"
+        "imagem subtitulo";
+    row-gap: 0.25rem;
+    column-gap: 1rem;
+    grid-template-columns: 56px auto auto;
+}
+
+.conteudo__imagem{
+    grid-area: imagem;
+    align-self: center;
+    width: 56px;
+    height: 56px;
+}
+
+.conteudo__titulo , .conteudo__subtitulo{
+    grid-area: titulo;
+    align-self:flex-end;
+    font-size: 1em;
+}
+
+.conteudo__subtitulo{
+    grid-area: subtitulo;    
+    align-self: flex-start;
+}
+
+.barra-reproducao__controles-reproducao{
+    grid-area: controles-reproducao;
+    display: flex;
+    justify-content: space-around;
+}
+
+.controles-reproducao__container{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.barra-reproducao__temporizador{
+    grid-area: temporizador;
+    display: flex;
+    justify-content: space-around;
+}
+
+.temporizador__tempo-decorrido-container{
+    width: 80%;
+    max-width: 200rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.temporizador__tempo-decorrido-container .barra-progresso{
+    width: 80%;
+}
+
+.barra-reproducao__controle-volume{
+    grid-area: volume;
+    display: flex;
+    align-items: center;
+}
+
+.controle-volume__container{
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+@media screen and (max-width: 816px){
+    .barra-reproducao__controle-volume{
+        display: none;
+    }
+
+    .controles-reproducao__item{
+        display: none;
+    }
+
+    .botao-play-container{
+        display: block;
+    }
+
+    .temporizador__tempo-decorrido-container span{
+        display: none;
+    }
+
+    .barra-reproducao{
+        grid-template-areas: 
+            "conteudo controles-reproducao"
+            "conteudo controles-reproducao"
+            "temporizador temporizador";
+        grid-template-columns: 
+            minmax(min(5%,100px), max(10%, 300px))
+            minmax(min(10%,50px), max(15%, 60px)) ;
+    }
+    .barra-reproducao__conteudo{
+        column-gap: 0.5rem;
+    }
+    
+    .temporizador__tempo-decorrido-container .barra-progresso,
+    .temporizador__tempo-decorrido-container{
+        width: 100%;
+    }
+    
+}

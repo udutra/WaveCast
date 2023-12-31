@@ -1,3 +1,4 @@
+/* Tamanho Celular */ 
 @media only screen and (max-width: 1023px) {
     .menu-lateral,
     .rodape,
@@ -39,9 +40,10 @@
         background-color: transparent;
         padding: 0;
     }
-
 }
 
+
+/* Tamanho Tablet */ 
 @media only screen and (min-width: 1024px) and (max-width: 1399px) {
 
     .container {
@@ -54,9 +56,9 @@
         display: none;
     }
 
-.menu-lateral{
-    width: 208px;
-}
+    .menu-lateral{
+        width: 208px;
+    }
 
     .navbar {
         display: none;
@@ -81,6 +83,8 @@
 
 }
 
+
+/* Tamanho PC */ 
 @media only screen and (min-width: 1400px) {
 
     .navbar,
@@ -91,5 +95,4 @@
     .menu-lateral{
         width: 228px;
     }
-
 }
